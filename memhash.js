@@ -607,17 +607,7 @@ function calculateHashNew(
   timestamp,
   minerId
 ) {
-  const input =
-    index.toString() +
-    "-" +
-    previousHash +
-    "-" +
-    data +
-    "-" +
-    nonce +
-    "-" +
-    timestamp +
-    "-" +
-    minerId;
+  const input = `${index}-${previousHash}-${data}-${nonce}-${timestamp}-${minerId}`;
+
   return forge_sha256(input);
 }
